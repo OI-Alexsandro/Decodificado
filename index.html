@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="tela">
+        <div class="conteudo">
+            <div class="logo">
+                <img src="/img/logo.png" alt="">
+            </div>
+            <div class="origem">
+                <span class="texto-primario">Digite seu texto:</span>
+                <textarea id="origem" onkeyup="calcular()" onchange="calcular()"></textarea>
+                <div class="botoes">
+                    <button id="criptografar" class="botao botao-primario" onclick="selecionarModo(MODO.CRIPTOGRAFAR)">Criptografar</button>
+                    <button id="descriptografar" class="botao" onclick="selecionarModo(MODO.DESCRIPTOGRAFAR)">Descriptografar</button>
+                </div>
+            </div>
+            <div class="destino">
+                <img id="vazio-1" src="/img/search.png" alt="">
+                <h4 id="vazio-2" style="font-size: x-large; text-align: center;">Nenhuma mensagem encontrada</h4>
+                <span id="vazio-3" style="text-align: center; color: gray;">Digite um texto que você deseja criptografar ou descriptografar.</span>
+                <textarea id="destino" disabled></textarea>
+                <button id="copiar" class="botao botao-primario" onclick="copiar()">Copiar</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
